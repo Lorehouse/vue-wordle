@@ -117,6 +117,7 @@ function completeRow() {
         copytext = ['Praiseworthy', 'Excellent', 'Brilliant', 'Marvelous', 'Stupendous', 'Phew'][currentRowIndex] + "\n"
         copytext += grid + "\n"
         copytext += "Lordle of the Rings #" + dayNumber
+        copytext += "https://lordle.digitaltolkien.com"
         showMessage(
           ['Praiseworthy', 'Excellent', 'Brilliant', 'Marvelous', 'Stupendous', 'Phew'][
             currentRowIndex
@@ -135,6 +136,7 @@ function completeRow() {
       grid = genResultGrid()
       copytext = grid + "\n"
       copytext += "Lordle of the Rings #" + dayNumber
+      copytext += "https://lordle.digitaltolkien.com"
       setTimeout(() => {
         showMessage(answer.toUpperCase(), -1)
       }, 1600)
@@ -188,7 +190,7 @@ function copy() {
       {{ message }}
       <pre v-if="grid">{{ grid }}</pre>
       Lordle of the Rings #{{ dayNumber }}
-      <pre v-if="copytext"><a style="cursor:pointer;" @click="copy">Copy to clipboard</a></pre>
+      <pre v-if="copytext"><a style="cursor: pointer; font-weight:400; font-family: Clear Sans, Helvetica Neue, Arial, sans-serif; font-style: italic;" @click="copy">Copy to clipboard</a></pre>
     </div>
   </Transition>
   <header>
